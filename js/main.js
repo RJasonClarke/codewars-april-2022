@@ -13,8 +13,12 @@
 // If an empty value ( null, None, Nothing etc. ) is given instead of an array, or the given array is an empty list or a list with only 1 element, return 0.
 
 function sumArray(array) {
-    let sortedArr = array.sort((a, b) => {return a - b})
-    sortedArr.shift()
-    sortedArr.pop()
-    return sortedArr
+    let sum = 0;
+    let sortedArr = array.sort((a, b) => {return a - b});
+    sortedArr.shift();
+    sortedArr.pop();
+    for(let i = 0; i < sortedArr.length; i++){
+        sum += sortedArr[i];
+    }
+    return sum
   }
